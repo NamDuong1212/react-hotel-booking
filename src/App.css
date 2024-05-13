@@ -1,38 +1,247 @@
-.App {
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+label, input {
+display: block;
+height: 40px;
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+.container {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0 px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.site-title {
+  font-size: 2rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.nav li.active {
+  background-color: #555;
+}
+
+.nav li:hover {
+  background-color: #777;
+}
+
+/* Hero Section */
+.hero {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/images/background-images/background1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 700px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+
+.hero form input,
+.hero form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  margin-right: 0.5rem;
+  border-radius:25px;
+}
+
+
+.hero form input {
+  flex: 1;
+  border-radius:15px;
+}
+
+.hero form button {
+  background-color: #ff6347;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius:25px;
+}
+
+.hero form button:hover {
+  background-color: #e65c4f;
+}
+
+/* Featured Hotels */
+.featured-hotels {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.featured-hotels h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hotel-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: left;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.hotel-card {
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-right: 2rem;
+  min-width: 300px;
+}
+
+.hotel-card:last-child {
+  margin-right: 0;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+
+.hotel-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius:10px;
+}
+
+.hotel-card .content {
+  padding: 1.5rem;
+}
+
+.hotel-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hotel-card p {
+  margin-bottom: 1.5rem;
+}
+
+.hotel-card button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius:25px;
+}
+
+.hotel-card button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+}
+
+.hotel-card button:hover::before {
+  left: 100%;
+}
+
+.hotel-card button:hover {
+  background-color: #e65c4f;
+  transform: scale(1.05);
 }

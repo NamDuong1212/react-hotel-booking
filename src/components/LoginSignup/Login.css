@@ -1,0 +1,75 @@
+/* Màu nền và font chữ */
+body {
+    background-color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Kiểu cho khung đăng nhập */
+  .card-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  
+  /* Kiểu cho ảnh đại diện */
+  .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Kiểu cho form */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Kiểu cho nút đăng nhập */
+  .btn-primary {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius:25px
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff6347;
+    border-color: #ff6347;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  }
+  
+  /* Kiểu cho thông báo lỗi */
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }

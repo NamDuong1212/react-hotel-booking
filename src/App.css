@@ -52,7 +52,7 @@ nav .logo a {
 }
 
 .site-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 nav ul {
@@ -168,7 +168,7 @@ nav ul li a:hover {
 }
 
 .hotel-list {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   justify-content: left;

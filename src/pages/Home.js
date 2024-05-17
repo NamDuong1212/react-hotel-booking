@@ -54,6 +54,14 @@ const Home = () => {
                 <button>Book Now</button>
               </div>
             </div>
+            <div className="hotel-card">
+              <img src="./images/hotel-images/hotel3.jpg" alt="Hotel 3" />
+              <div className="content">
+                <h3>Hotel 3</h3>
+                <p>Not An Actual Hotel</p>
+                <button>Book Now</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

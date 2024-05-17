@@ -1,5 +1,5 @@
-
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+
 
 export default function Navbar() {
   return (
@@ -10,7 +10,8 @@ export default function Navbar() {
       <ul>
         <CustomLink to="/pricing">Pricing</CustomLink>
         <CustomLink to="/about">About</CustomLink>
-        <CustomLink to="/loginsignup">Login/Signup</CustomLink>
+        <CustomLink to="/login">Login</CustomLink>
+        <CustomLink to="/register">Register</CustomLink>
       </ul>
     </nav>
   )

@@ -4,7 +4,10 @@ import Home from "./pages/Home.js"
 import About from "./pages/About"
 import Login from "./components/Login"
 import Register from "./components/Register"
-
+import DestinationDetail from "./admin/DestinationDetail.js"
+import DestinationList from "./admin/DestinationList.js"
+import DestinationForm from "./admin/DestinationForm.js"
+import Admin from "./admin/Admin.js"
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
 
@@ -19,6 +22,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/admin/destinations" element={<DestinationList />} />
+          <Route path="/admin/destination/:id" element={<DestinationDetail />} />
+          <Route path="/admin/add" element={<DestinationForm />} />
+          <Route path="/admin/edit/:id" element={<DestinationForm />} />
+          <Route path="/admin" element={<Admin/>}/>
         </Routes>
       </div>
     </>

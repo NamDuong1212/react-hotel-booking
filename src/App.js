@@ -7,7 +7,7 @@ import Register from "./components/Register"
 import DestinationDetail from "./admin/DestinationDetail.js"
 import DestinationList from "./admin/DestinationList.js"
 import DestinationForm from "./admin/DestinationForm.js"
-import Admin from "./admin/Admin.js"
+import AdminPanel from "./admin/Admin.js"
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
 
@@ -26,7 +26,7 @@ function App() {
           <Route path="/admin/destination/:id" element={<DestinationDetail />} />
           <Route path="/admin/add" element={<DestinationForm />} />
           <Route path="/admin/edit/:id" element={<DestinationForm />} />
-          <Route path="/admin" element={<Admin/>}/>
+          <Route path="/admin" element={<AdminPanel/>}/>
         </Routes>
       </div>
     </>

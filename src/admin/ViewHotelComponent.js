@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import HotelService from './HotelService';
 import "./beauty.css";
 import StarRating from './StarRating';
@@ -8,6 +8,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function ViewHotelComponent() {
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const [hotel, setHotel] = useState({});
     const [beds, setBeds] = useState(1);
@@ -45,8 +46,17 @@ function ViewHotelComponent() {
     };
 
     const handleBookNow = () => {
-
-        alert('Booking confirmed!');
+        navigate('/payment', {
+            state: {
+                hotelId: id,
+                hotelName: hotel.name,
+                beds: beds,
+                people: people,
+                checkinDate: checkinDate,
+                checkoutDate: checkoutDate,
+                totalPrice: totalPrice
+            }
+        });
     };
 
     const handleCheckinDateChange = (e) => {
@@ -72,11 +82,11 @@ function ViewHotelComponent() {
             <div className="left-column1">
                 <Carousel>
                     <div>
-                        <img className="carousel-image" src={`data:image/jpeg;base64,${hotel.image}`} alt = "Hotel"/>
+                        <img className="carousel-image" src={`data:image/jpeg;base64,${hotel.image}`} alt="Hotel" />
                         <p className="legend">Page 1</p>
                     </div>
                     <div>
-                        <img className="carousel-image" src={`data:image/jpeg;base64,${hotel.image2}`} />
+                        <img className="carousel-image" src={`data:image/jpeg;base64,${hotel.image2}`} alt="Hotel" />
                         <p className="legend">Page 2</p>
                     </div>
                 </Carousel>

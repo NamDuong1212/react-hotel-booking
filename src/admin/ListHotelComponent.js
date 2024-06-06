@@ -16,9 +16,11 @@ class ListHotelComponent extends Component {
     }
 
     deleteHotel(id) {
-        HotelService.deleteHotel(id).then(res => {
-            this.setState({ hotels: this.state.hotels.filter(hotel => hotel.id !== id) });
-        });
+        if (window.confirm("Are you sure you want to delete this hotel?")) {
+            HotelService.deleteHotel(id).then(res => {
+                this.setState({ hotels: this.state.hotels.filter(hotel => hotel.id !== id) });
+            });
+        }
     }
 
     viewHotel(id) {

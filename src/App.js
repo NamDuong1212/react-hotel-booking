@@ -7,7 +7,7 @@ import Register from "./components/Register"
 import ListHotelComponent from "./admin/ListHotelComponent"
 import CreateHotelComponent from "./admin/CreateHotelComponent"
 import ViewHotelComponent from "./admin/ViewHotelComponent"
-
+import PaymentComponent from "./admin/PaymentComponent"
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
 
@@ -26,6 +26,7 @@ function App() {
           <Route path="/hotels" element={<ListHotelComponent />} />
           <Route path="/add-hotel/:id" element={<CreateHotelComponent />} />
           <Route path="/view-hotel/:id" element={<ViewHotelComponent />} />
+          <Route path="/payment" element={<PaymentComponent />} />
         </Routes>
       </div>
     </>

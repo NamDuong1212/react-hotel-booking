@@ -1,0 +1,8 @@
+/* beauty.css */
+.star-rating {
+    font-size: 24px; /* Kích thước của ngôi sao */
+}
+
+.star {
+    color: #ffd700; /* Màu vàng */
+}

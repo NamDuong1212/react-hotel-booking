@@ -2,3 +2,4 @@ npm i @redux-devtools/extension
 npm install redux redux-thunk
 npm install react-validation validator
 npm install uuid@latest
+npm install react-responsive-carousel
